@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerTarget = document.getElementById('footer');
   if (footerTarget) {
     const basePath = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/');
-    fetch(`${basePath}/../footer.html`)
+    fetch('/Simple-Paint-Solutions/header.html')
+
       .then(res => res.text())
       .then(html => {
         footerTarget.innerHTML = html;
