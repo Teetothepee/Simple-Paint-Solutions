@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Contact Us - Simple Paint Solutions</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=3" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Header -->
+  <div id="navbar"></div>
+  <script src="assets/js/header.js"></script>
+
+  <!-- Contact Page Layout -->
+  <section class="contact-page">
+
+    <!-- Contact Info Box -->
+    <div class="contact-box">
+      <h2>Contact Us</h2>
+      <p>For a free estimate on your painting or exterior cleaning projects, reach out to us today.</p>
+
+      <div class="contact-line">
+        <img src="assets/images/email-icon.png" alt="Email" />
+        <a href="mailto:info@simplepaintsolutions.com">info@simplepaintsolutions.com</a>
+      </div>
+
+      <div class="contact-line">
+        <img src="assets/images/phone-icon.png" alt="Phone" />
+        <a href="tel:7788099659">778 - 809 - 9659</a>
+      </div>
+
+      <div class="contact-socials">
+        <a href="https://www.instagram.com/simplepaintsolutions/" target="_blank">
+          <img src="assets/images/InstagramIcon.png" alt="Instagram" />
+        </a>
+        <a href="https://www.linkedin.com/company/simplepaintsolutions/" target="_blank">
+          <img src="assets/images/LinkedInIcon.png" alt="LinkedIn" />
+        </a>
+      </div>
+    </div>
+
+    <!-- Booking Section -->
+<div class="calendar-section">
+  <h3>Schedule the best time for your free quote today!</h3>
+  
+  <!-- ✅ Add Calendar and Slots -->
+  <div id="calendar-container">
+    <div id="calendar" class="calendar-days"></div>
+    <div id="time-slots" class="calendar-slots" style="display: none;"></div>
+    <button id="back-button" class="back-button" style="display: none;">← Back to Calendar</button>
+  </div>
+
+  <!-- ✅ Booking Form -->
+  <form id="booking-form" action="https://formspree.io/f/xyzjvogy" method="POST" style="display: none;" class="quote-form">
+    <input type="hidden" name="date" id="form-date" />
+    <input type="hidden" name="time" id="form-time" />
+    <label for="email">Email:</label>
+    <input type="email" name="email" required />
+    <label for="phone">Phone Number:</label>
+    <input type="text" name="phone" required />
+
+    <label for="street">Street Address</label>
+    <input type="text" id="street" name="Street Address" required>
+    <label for="city">City</label>
+    <input type="text" id="city" name="City" required>
+    <label for="postal">Postal Code</label>
+    <input type="text" id="postal" name="Postal Code" required>
+
+    <button type="submit" class="quote-button">Submit Quote Request</button>
+  </form>
+</div>
+
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script src="assets/js/footer.js"></script>
+  <script src="assets/js/scheduler.js"></script>
+
+</body>
+</html>
+
+

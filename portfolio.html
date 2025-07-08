@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Portfolio - Simple Paint Solutions</title>
+  <link rel="stylesheet" href="assets/css/style.css?v=4" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- Nav -->
+  <div id="navbar"></div>
+  <script src="assets/js/header.js"></script>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section">
+    <h1 class="portfolio-title">Our Work</h1>
+
+    <!-- Filter Buttons -->
+    <div class="portfolio-filters">
+      <button class="filter-button active" data-filter="all">All</button>
+      <button class="filter-button" data-filter="interior">Interior Painting</button>
+      <button class="filter-button" data-filter="exterior">Exterior Painting</button>
+      <button class="filter-button" data-filter="commercial">Commercial Painting</button>
+      <button class="filter-button" data-filter="cabinets">Cabinet Refinishing</button>
+      <button class="filter-button" data-filter="cleaning">Exterior Cleaning</button>
+    </div>
+
+    <!-- Portfolio Gallery -->
+    <div class="portfolio-grid">
+      <!-- Sample placeholders -->
+      <div class="portfolio-item interior">
+        <img src="assets/images/WoodwardSt1.jpg" alt="Interior Project 1">
+        <img src="assets/images/WoodwardSt2.jpg" alt="Interior Project 2">
+        <img src="assets/images/WoodwardSt3.jpg" alt="Interior Project 1">
+        <img src="assets/images/WoodwardSt4.jpg" alt="Interior Project 1">
+        <img src="assets/images/WoodwardSt5.jpg" alt="Interior Project 1">
+        <img src="assets/images/WoodwardSt6.jpg" alt="Interior Project 1">
+        <img src="assets/images/WoodwardSt7.jpg" alt="Interior Project 1">
+        <img src="assets/images/TerminalAve1.png" alt="Interior Project 1">
+      </div>
+      <div class="portfolio-item exterior">
+        <img src="assets/images/54a3.jpg" alt="Exterior Project 1">
+        <img src="assets/images/54a4.jpg" alt="Exterior Project 2">
+        <img src="assets/images/54a1.jpg" alt="Exterior Project 3">
+        <img src="assets/images/IocoRd1.jpg" alt="Exterior Project 4">
+        <img src="assets/images/IocoRd2.jpg" alt="Exterior Project 5">
+        <img src="assets/images/IocoRd3.jpg" alt="Exterior Project 6">
+        <img src="assets/images/IocoRd4.jpg" alt="Exterior Project 7">
+        <img src="assets/images/IocoRd6.jpg" alt="Exterior Project 8">
+        <img src="assets/images/NanaimoSt2.jpg" alt="Exterior Project 1">
+      </div>
+      <div class="portfolio-item commercial">
+        <img src="assets/images/TerminalAve2.png" alt="Commercial Project 1">
+      </div>
+      <div class="portfolio-item cabinets">
+        <img src="assets/images/CabinetRefinishing.png" alt="Cabinet Project 1">
+      </div>
+      <div class="portfolio-item cleaning">
+        <img src="assets/images/Sandringham1.png" alt="Cleaning Project 1">
+      </div>
+      <!-- Add more items as needed -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <div id="footer"></div>
+  <script src="assets/js/footer.js"></script>
+  <script>
+    // Portfolio filter script
+    const buttons = document.querySelectorAll('.filter-button');
+    const items = document.querySelectorAll('.portfolio-item');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        buttons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        const filter = btn.dataset.filter;
+        items.forEach(item => {
+          item.style.display = filter === 'all' || item.classList.contains(filter)
+            ? 'block'
+            : 'none';
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
