@@ -1,11 +1,7 @@
-// assets/js/footer.js
 document.addEventListener('DOMContentLoaded', () => {
   const footerTarget = document.getElementById('footer');
   if (footerTarget) {
-    const basePath = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/');
-    fetch('https://teetothepee.github.io/Simple-Paint-Solutions/footer.html')
-
-
+    fetch('/Simple-Paint-Solutions/footer.html')
       .then(res => res.text())
       .then(html => {
         footerTarget.innerHTML = html;
@@ -13,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(err => console.error('Failed to load footer:', err));
   }
 });
+
 
 
 
