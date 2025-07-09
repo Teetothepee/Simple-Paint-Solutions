@@ -804,3 +804,23 @@ body {
   object-fit: cover;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+/* Fix for "Get a Quote" button on mobile */
+@media (max-width: 768px) {
+  .nav-center {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .quote-button {
+    padding: 10px 14px;
+    font-size: 14px;
+    white-space: nowrap;
+    margin-top: 5px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
