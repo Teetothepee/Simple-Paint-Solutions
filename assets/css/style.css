@@ -824,3 +824,25 @@ body {
     align-items: center;
   }
 }
+@media (max-width: 768px) {
+  .navbar .nav-link {
+    font-size: 14px; /* Make nav links smaller */
+  }
+
+  .quote-button {
+    font-size: 13px;
+    padding: 6px 10px; /* Smaller button on mobile */
+  }
+
+  .nav-center {
+    gap: 8px; /* Less spacing between nav links */
+  }
+
+  .navbar .logo {
+    max-width: 90px; /* Shrinks logo slightly */
+  }
+
+  .sprayman {
+    max-width: 40px; /* Shrinks sprayman image */
+  }
+}
