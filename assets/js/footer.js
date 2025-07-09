@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
   const footerTarget = document.getElementById('footer');
   if (footerTarget) {
-    fetch('/Simple-Paint-Solutions/footer.html')
+    fetch('/footer.html')
       .then(res => res.text())
       .then(html => {
         footerTarget.innerHTML = html;
