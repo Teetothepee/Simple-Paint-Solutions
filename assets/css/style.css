@@ -846,3 +846,31 @@ body {
     max-width: 40px; /* Shrinks sprayman image */
   }
 }
+@media (max-width: 768px) {
+  .nav-center {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .nav-center a.nav-link,
+  .quote-button {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
+    white-space: nowrap;
+  }
+
+  .quote-button {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    background-color: #F49000;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+  }
+
+  .nav-left,
+  .nav-right {
+    display: none; /* Optionally hide sprayman and logo for space */
+  }
+}
