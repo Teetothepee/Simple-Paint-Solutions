@@ -1,9 +1,7 @@
-// assets/js/footer.js
 document.addEventListener('DOMContentLoaded', () => {
   const footerTarget = document.getElementById('footer');
   if (footerTarget) {
-    const basePath = window.location.origin + window.location.pathname.split('/').slice(0, -1).join('/');
-    fetch(`${basePath}/../footer.html`)
+    fetch('/footer.html')
       .then(res => res.text())
       .then(html => {
         footerTarget.innerHTML = html;
@@ -11,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
       .catch(err => console.error('Failed to load footer:', err));
   }
 });
+
 
 
 
