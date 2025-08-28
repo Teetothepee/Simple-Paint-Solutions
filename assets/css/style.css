@@ -874,3 +874,39 @@ body {
     display: none; /* Optionally hide sprayman and logo for space */
   }
 }
+/* === Quote Contact Styles === */
+:root {
+  --brand-orange: #F49000;
+  --brand-blue: #13008A;
+}
+
+.quote-contact { padding: 28px 0 48px; }
+.qc-title {
+  font-weight: 600;
+  margin: 10px 0 22px;
+  color: var(--brand-blue);
+}
+
+.qc-list { list-style: none; padding: 0; margin: 0; display: grid; gap: 14px; }
+.qc-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 14px 16px; border: 1px solid #e5e7eb; border-radius: 14px;
+  text-decoration: none; color: inherit; background: #fff;
+  transition: transform .08s ease, box-shadow .12s ease, border-color .12s ease;
+}
+.qc-item:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.06); border-color: #d1d5db; }
+.qc-icon {
+  display: grid; place-items: center;
+  width: 42px; height: 42px; border-radius: 12px;
+  background: linear-gradient(135deg, var(--brand-orange), var(--brand-blue));
+  color: #fff; flex: 0 0 42px;
+}
+.qc-text strong { display: block; font-weight: 700; }
+.qc-text span { opacity: .9; }
+
+.qc-note { margin-top: 18px; color: #475569; }
+
+/* Page hero consistency */
+.page-hero.compact h1 { color: var(--brand-blue); }
+.btn.primary { background: var(--brand-orange); color: #fff; }
+.btn-quote { background: var(--brand-blue); color: #fff; }
