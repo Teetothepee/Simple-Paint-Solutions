@@ -2,27 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cabinet Refinishing - Simple Paint Solutions</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png?v=10">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=10">
-  <link rel="stylesheet" href="assets/css/style.css?v=4" />
+  <meta name="description" content="High-impact, cost-effective cabinet refinishing for kitchens across the Lower Mainland. Modern finishes, durable coatings, meticulous prep.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png?v=12">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=12">
+
+  <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=12" />
+
+  <!-- Page helpers (safe even if defined globally) -->
+  <style>
+    .hero-simple { width: 100%; }
+    .hero-simple-img {
+      width: 100%;
+      height: 60vh;          /* adjust 50–80vh to taste */
+      display: block;
+      object-fit: cover;     /* fills area nicely, crops edges */
+    }
+    /* neutralize legacy hero classes if present */
+    .hero-section, .hero-video, .hero-overlay { display: none !important; }
+  </style>
 </head>
 <body>
 
-  <!-- NavBar -->
-  <div id="navbar"></div>
-  <script src="assets/js/header.js"></script>
+  <!-- Header include -->
+  <div id="header"></div>
+  <script defer src="/assets/js/header.js?v=12"></script>
 
-  <!-- Hero Image Section -->
-  <section class="hero-section">
-    <img src="assets/images/CabinetRefinishing.png" alt="Cabinet Refinishing Hero" class="hero-image" />
-    <div class="hero-overlay">
-      <h1>Cabinet Refinishing</h1>
-    </div>
+  <!-- HERO (image only, no overlay) -->
+  <section class="hero-simple">
+    <img src="/assets/images/CabinetRefinishing.png" alt="Cabinet Refinishing" class="hero-simple-img" />
   </section>
 
-  <!-- Orange Content Box -->
+  <!-- ORANGE CONTENT BOX -->
   <section class="service-detail">
     <div class="service-box">
       <h2>Cabinet Refinishing with Simple Paint Solutions</h2>
@@ -45,16 +61,11 @@
       <p>
         At Simple Paint Solutions, we handle your project from planning to final coat with precision and care. We’ll assess your existing cabinetry and walk you through all the best options to restore, refresh, or upgrade your kitchen’s style — the Simple way. 
       </p>
-
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer include -->
   <div id="footer"></div>
-  <script src="assets/js/footer.js"></script>
-
+  <script defer src="/assets/js/footer.js?v=12"></script>
 </body>
 </html>
-
-
-
