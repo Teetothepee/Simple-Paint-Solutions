@@ -2,25 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Commercial Painting - Simple Paint Solutions</title>
-  <link rel="stylesheet" href="assets/css/style.css?v=3" />
+  <meta name="description" content="Commercial interior & exterior painting for offices, retail, restaurants and more across the Lower Mainland. Clean, efficient, professional.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png?v=12">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=12">
+
+  <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=12" />
+
+  <!-- Page-scoped helpers (safe even if already present globally) -->
+  <style>
+    /* Use the simple hero pattern used on other pages */
+    .hero-simple { width: 100%; }
+    .hero-simple-img {
+      width: 100%;
+      height: 60vh;          /* adjust 50–80vh as you like */
+      display: block;
+      object-fit: cover;     /* fills nicely, crops edges */
+    }
+    /* Ensure any legacy hero classes don't interfere */
+    .hero-section, .hero-video, .hero-overlay { display: none !important; }
+  </style>
 </head>
 <body>
 
-  <!-- Header -->
-  <div id="navbar"></div>
-  <script src="assets/js/header.js"></script>
+  <!-- Header include -->
+  <div id="header"></div>
+  <script defer src="/assets/js/header.js?v=12"></script>
 
-  <!-- Hero Section with Background Image -->
-  <section class="hero-section">
-    <img src="assets/images/TerminalAve2.png" alt="Commercial Painting" class="hero-image" />
-    <div class="hero-overlay">
-      <h1>Commercial Painting</h1>
-    </div>
+  <!-- HERO (image only, no overlay) -->
+  <section class="hero-simple">
+    <img src="/assets/images/TerminalAve2.png" alt="Commercial Painting" class="hero-simple-img" />
   </section>
 
-  <!-- Orange Info Box Section -->
+  <!-- ORANGE INFO BOX -->
   <section class="info-box">
     <div class="info-box-content">
       <h2>Commercial Painting with Simple Paint Solutions</h2>
@@ -50,10 +69,8 @@
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer include -->
   <div id="footer"></div>
-  <script src="assets/js/footer.js"></script>
-
+  <script defer src="/assets/js/footer.js?v=12"></script>
 </body>
 </html>
-

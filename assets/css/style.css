@@ -910,3 +910,32 @@ body {
 .page-hero.compact h1 { color: var(--brand-blue); }
 .btn.primary { background: var(--brand-orange); color: #fff; }
 .btn-quote { background: var(--brand-blue); color: #fff; }
+
+:root { --brand-orange:#F49000; --brand-blue:#13008A; }
+
+.hero { position:relative; min-height:60vh; display:grid; place-items:center; overflow:hidden; }
+.hero-img { width:100%; height:70vh; object-fit:cover; display:block; }
+.hero-overlay {
+  position:absolute; inset:0;
+  display:grid; place-items:center; text-align:center; padding:0 1rem;
+  background:linear-gradient(0deg, rgba(0,0,0,.45), rgba(0,0,0,.10));
+}
+.hero-overlay h1 { color:#fff; font-size:clamp(28px,5vw,56px); line-height:1.05; margin:0 0 10px; }
+.hero-pillars { color:#fff; font-size:clamp(14px,2.4vw,20px); opacity:.95; margin:0 0 20px; }
+.btn.primary { background:var(--brand-orange); color:#fff; }
+
+@media (max-width:900px){ .hero-img{ height:56vh; } }
+
+/* Simple hero image (replaces old video/overlay) */
+.hero-simple {
+  width: 100%;
+}
+.hero-simple-img {
+  width: 100%;
+  height: 60vh;         /* adjust 50–80vh to taste */
+  display: block;
+  object-fit: cover;    /* fills area nicely, crops edges */
+}
+
+/* Make sure any old hero overlay/video are gone */
+.hero-overlay, .hero-video, .hero-section { display: none !important; }
