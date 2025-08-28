@@ -2,17 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Portfolio - Simple Paint Solutions</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png?v=10">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=10">
-  <link rel="stylesheet" href="assets/css/style.css?v=4" />
+  <meta name="description" content="Browse our portfolio of residential, commercial, cabinet, and exterior cleaning projects across the Lower Mainland.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png?v=12">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=12">
+
+  <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=12" />
 </head>
 <body>
 
-  <!-- Nav -->
-  <div id="navbar"></div>
-  <script src="assets/js/header.js"></script>
+  <!-- Header include -->
+  <div id="header"></div>
+  <script defer src="/assets/js/header.js?v=12"></script>
 
   <!-- Portfolio Section -->
   <section class="portfolio-section">
@@ -30,46 +36,60 @@
 
     <!-- Portfolio Gallery -->
     <div class="portfolio-grid">
-      <!-- Sample placeholders -->
+      <!-- Interior Painting -->
       <div class="portfolio-item interior">
-        <img src="assets/images/WoodwardSt1.jpg" alt="Interior Project 1">
-        <img src="assets/images/WoodwardSt2.jpg" alt="Interior Project 2">
-        <img src="assets/images/WoodwardSt3.jpg" alt="Interior Project 1">
-        <img src="assets/images/WoodwardSt4.jpg" alt="Interior Project 1">
-        <img src="assets/images/WoodwardSt5.jpg" alt="Interior Project 1">
-        <img src="assets/images/WoodwardSt6.jpg" alt="Interior Project 1">
-        <img src="assets/images/WoodwardSt7.jpg" alt="Interior Project 1">
-        <img src="assets/images/TerminalAve1.png" alt="Interior Project 1">
+        <img src="/assets/images/WoodwardSt1.jpg" alt="Interior Project Woodward 1">
+        <img src="/assets/images/WoodwardSt2.jpg" alt="Interior Project Woodward 2">
+        <img src="/assets/images/WoodwardSt3.jpg" alt="Interior Project Woodward 3">
+        <img src="/assets/images/WoodwardSt4.jpg" alt="Interior Project Woodward 4">
+        <img src="/assets/images/WoodwardSt5.jpg" alt="Interior Project Woodward 5">
+        <img src="/assets/images/WoodwardSt6.jpg" alt="Interior Project Woodward 6">
+        <img src="/assets/images/WoodwardSt7.jpg" alt="Interior Project Woodward 7">
+        <img src="/assets/images/TerminalAve1.png" alt="Interior Project Terminal Ave">
+
+        <!-- New McBride Projects -->
+        <img src="/assets/images/McBrideST1.jpg" alt="Interior Project McBride 1">
+        <img src="/assets/images/McBrideST2.jpg" alt="Interior Project McBride 2">
+        <img src="/assets/images/McBrideST3.jpg" alt="Interior Project McBride 3">
+        <img src="/assets/images/McBrideST4.jpg" alt="Interior Project McBride 4">
       </div>
+
+      <!-- Exterior Painting -->
       <div class="portfolio-item exterior">
-        <img src="assets/images/54a3.jpg" alt="Exterior Project 1">
-        <img src="assets/images/54a4.jpg" alt="Exterior Project 2">
-        <img src="assets/images/54a1.jpg" alt="Exterior Project 3">
-        <img src="assets/images/IocoRd1.jpg" alt="Exterior Project 4">
-        <img src="assets/images/IocoRd2.jpg" alt="Exterior Project 5">
-        <img src="assets/images/IocoRd3.jpg" alt="Exterior Project 6">
-        <img src="assets/images/IocoRd4.jpg" alt="Exterior Project 7">
-        <img src="assets/images/IocoRd6.jpg" alt="Exterior Project 8">
-        <img src="assets/images/NanaimoSt2.jpg" alt="Exterior Project 1">
+        <img src="/assets/images/54a3.jpg" alt="Exterior Project 1">
+        <img src="/assets/images/54a4.jpg" alt="Exterior Project 2">
+        <img src="/assets/images/54a1.jpg" alt="Exterior Project 3">
+        <img src="/assets/images/IocoRd1.jpg" alt="Exterior Project 4">
+        <img src="/assets/images/IocoRd2.jpg" alt="Exterior Project 5">
+        <img src="/assets/images/IocoRd3.jpg" alt="Exterior Project 6">
+        <img src="/assets/images/IocoRd4.jpg" alt="Exterior Project 7">
+        <img src="/assets/images/IocoRd6.jpg" alt="Exterior Project 8">
+        <img src="/assets/images/NanaimoSt2.jpg" alt="Exterior Project 9">
       </div>
+
+      <!-- Commercial Painting -->
       <div class="portfolio-item commercial">
-        <img src="" alt="Commercial Project 1">
+        <img src="/assets/images/ReliableWheelProject.jpg" alt="Commercial Project 1">
       </div>
+
+      <!-- Cabinet Refinishing -->
       <div class="portfolio-item cabinets">
-        <img src="assets/images/CabinetRefinishing.png" alt="Cabinet Project 1">
+        <img src="/assets/images/CabinetRefinishing.png" alt="Cabinet Project 1">
       </div>
+
+      <!-- Exterior Cleaning -->
       <div class="portfolio-item cleaning">
-        <img src="assets/images/Sandringham1.png" alt="Cleaning Project 1">
+        <img src="/assets/images/Sandringham1.png" alt="Cleaning Project 1">
       </div>
-      <!-- Add more items as needed -->
     </div>
   </section>
 
-  <!-- Footer -->
+  <!-- Footer include -->
   <div id="footer"></div>
-  <script src="assets/js/footer.js"></script>
+  <script defer src="/assets/js/footer.js?v=12"></script>
+
+  <!-- Filter Script -->
   <script>
-    // Portfolio filter script
     const buttons = document.querySelectorAll('.filter-button');
     const items = document.querySelectorAll('.portfolio-item');
 
@@ -89,4 +109,3 @@
   </script>
 </body>
 </html>
-
