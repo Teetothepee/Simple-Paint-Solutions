@@ -939,3 +939,51 @@ body {
 
 /* Make sure any old hero overlay/video are gone */
 .hero-overlay, .hero-video, .hero-section { display: none !important; }
+
+/* === Portfolio polish === */
+.portfolio-section { padding: 4rem 1.5rem; }
+.portfolio-title { font-size: clamp(28px,3.2vw,40px); margin-bottom: 1.25rem; color: #13008a; text-align:center; }
+
+.portfolio-filters { text-align:center; margin: 0 auto 2rem; display:flex; gap:.6rem; flex-wrap:wrap; justify-content:center; }
+.filter-button {
+  background:#fff; border:2px solid #13008a; color:#13008a; font-weight:600;
+  padding:.55rem .9rem; border-radius:10px; cursor:pointer; transition:transform .08s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+}
+.filter-button:hover { transform: translateY(-1px); box-shadow:0 6px 18px rgba(0,0,0,.08); }
+.filter-button.active { background:#13008a; color:#fff; }
+
+.portfolio-grid {
+  --min: 240px; /* card min width; tweak for density */
+  display:grid; gap:14px;
+  grid-template-columns: repeat(auto-fill, minmax(var(--min), 1fr));
+  align-items: stretch;
+}
+
+/* each portfolio “category” div holds many images — style the imgs uniformly */
+.portfolio-item img {
+  width:100%;
+  display:block; /* remove inline-gap */
+  border-radius:12px;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+  transition: transform .15s ease, box-shadow .2s ease, opacity .2s ease;
+  /* force consistent shape: pick one aspect ratio */
+  aspect-ratio: 4 / 3;      /* try 1 / 1 for squares, or 16 / 9 for wide */
+  object-fit: cover;        /* clean crops */
+  background:#f2f2f2;       /* pleasant placeholder while loading */
+}
+
+.portfolio-item img:hover {
+  transform: translateY(-2px) scale(1.01);
+  box-shadow:0 12px 28px rgba(0,0,0,.12);
+}
+
+/* optional: subtle reveal when filters switch */
+.portfolio-item { transition: opacity .2s ease, visibility .2s ease; }
+.portfolio-item[hidden] { opacity:0; visibility:hidden; }
+
+/* responsive tweaks */
+@media (max-width: 640px){
+  .portfolio-section { padding: 3rem 1rem; }
+  .portfolio-grid { --min: 160px; gap:10px; }
+}
+
