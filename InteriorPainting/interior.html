@@ -2,25 +2,43 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Interior Painting - Simple Paint Solutions</title>
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png?v=10">
-  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=10">
-  <link rel="stylesheet" href="assets/css/style.css?v=2" />
+  <meta name="description" content="Professional interior painting across the Lower Mainland — meticulous prep, clean lines, and durable finishes.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon.png?v=12">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.png?v=12">
+
+  <!-- Fonts & Styles -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css?v=12" />
+
+  <style>
+    /* Keep hero styling consistent with homepage/exterior */
+    .hero-simple { width: 100%; }
+    .hero-simple-img {
+      width: 100%;
+      height: 60vh;          /* adjust 50–80vh as you like */
+      display: block;
+      object-fit: cover;     /* fills area nicely, crops edges */
+    }
+    /* Ensure any old overlay/video classes don't interfere */
+    .hero-section, .hero-video, .hero-overlay { display: none !important; }
+  </style>
 </head>
 <body>
 
-  <!-- Hero Image Section<!-- Load the navbar -->
-<div id="navbar"></div>
-<script src="assets/js/header.js"></script>
-  <section class="hero-section">
-    <img src="assets/images/WoodwardSt2.jpg" alt="Interior Painting Hero" class="hero-image" />
-    <div class="hero-overlay">
-      <h1>Interior Painting</h1>
-    </div>
+  <!-- Header include -->
+  <div id="header"></div>
+  <script defer src="/assets/js/header.js?v=12"></script>
+
+  <!-- HERO (image only, no overlay) -->
+  <section class="hero-simple">
+    <img src="/assets/images/WoodwardSt2.jpg" alt="Interior Painting" class="hero-simple-img" />
   </section>
 
-  <!-- Orange Content Box -->
+  <!-- ORANGE CONTENT BOX (uses your existing .service-detail styles) -->
   <section class="service-detail">
     <div class="service-box">
       <h2>Interior Painting with Simple Paint Solutions</h2>
@@ -46,19 +64,15 @@
       <p>
         If you are considering changing the color of the interior of your home or need to replace a faded coat of paint, reach out to us today.
       </p>
+
+      <div style="margin-top: 1.25rem;">
+        <a class="btn primary" href="/Contact/contact.html">Get a Quote</a>
+      </div>
     </div>
   </section>
 
- 
-
-  
-</footer>
-<!-- Load the footer -->
-<div id="footer"></div>
-<script src="assets/js/footer.js"></script>
-
+  <!-- Footer include -->
+  <div id="footer"></div>
+  <script defer src="/assets/js/footer.js?v=12"></script>
 </body>
 </html>
-
-
-
