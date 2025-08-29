@@ -1013,3 +1013,13 @@ body {
 @media (max-width: 640px) {
   .hero-simple-img { height: 28vh; max-height: 340px; }
 }
+/* Exterior Cleaning hero - show full image without cropping */
+.hero-simple-img.cleaning {
+  width: 100% !important;
+  height: auto !important;
+  max-height: 500px;        /* keep it from being too tall */
+  display: block !important;
+  object-fit: contain !important;  /* never crop */
+  background: #13008a;      /* brand blue behind if letterbox */
+  margin: 0 auto;
+}
